@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tales</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-buttons">
+            <button id="login-btn">Login</button>
+            <button id="register-btn">Register</button>
+        </div>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Welcome to Time Tales</h1>
+            <p>Explore historical fiction stories, time travel adventures, and more.</p>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <form id="register-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+        <section id="products">
+            <h2>Historical Fiction Stories</h2>
+            <div class="product-card">
+                <img src="story1.jpg" alt="Story 1">
+                <h3>Story 1 Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button>Read Now</button>
+            </div>
+            <div class="product-card">
+                <img src="story2.jpg" alt="Story 2">
+                <h3>Story 2 Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button>Read Now</button>
+            </div>
+            <div class="product-card">
+                <img src="story3.jpg" alt="Story 3">
+                <h3>Story 3 Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button>Read Now</button>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Time Tales</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2022 Time Tales. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+header .header-buttons {
+    display: flex;
+}
+
+header .header-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.product-card button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+// scripts.js
+document.getElementById('login-btn').addEventListener('click', function() {
+    const loginForm = document.getElementById('login-form');
+    loginForm.style.display = 'block';
+    const registerForm = document.getElementById('register-form');
+    registerForm.style.display = 'none';
+});
+
+document.getElementById('register-btn').addEventListener('click', function() {
+    const loginForm = document.getElementById('login-form');
+    loginForm.style.display = 'none';
+    const registerForm = document.getElementById('register-form');
+    registerForm.style.display = 'block';
+});
